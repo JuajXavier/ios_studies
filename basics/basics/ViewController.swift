@@ -8,13 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var centerText: UILabel!
+    @IBAction func button(_ sender: Any) {
+        centerText.isHidden = !centerText.isHidden;
+    }
     
     override func viewDidLoad() {
-        
-        label.text = "Teste alteração";
-        
-        label.textColor = UIColor.purple;
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.

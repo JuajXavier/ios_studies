@@ -16,8 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIKit Basics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMm-fm-OeJ">
-                                <rect key="frame" x="105" y="424" width="204" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tls-OI-imx">
+                                <rect key="frame" x="20" y="64" width="374" height="57"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Show / Hide">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GlE-yc-y8T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appeared!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBp-is-RXk">
+                                <rect key="frame" x="118" y="424" width="178" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,12 +35,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AMm-fm-OeJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JLJ-6N-4FS"/>
-                            <constraint firstItem="AMm-fm-OeJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f29-NN-sTL"/>
+                            <constraint firstItem="YBp-is-RXk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Fn-Xn-x11"/>
+                            <constraint firstItem="tls-OI-imx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GAq-Hh-zAr"/>
+                            <constraint firstItem="tls-OI-imx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MXL-ph-riA"/>
+                            <constraint firstItem="YBp-is-RXk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dVD-CB-k5G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tls-OI-imx" secondAttribute="trailing" constant="20" id="xkb-h0-ajE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="AMm-fm-OeJ" id="rhf-x1-wNF"/>
+                        <outlet property="centerText" destination="YBp-is-RXk" id="qo2-I5-0AL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
